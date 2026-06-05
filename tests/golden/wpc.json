@@ -1,0 +1,43 @@
+{
+  "ingredient": "Whey protein concentrate (WPC)",
+  "as_of": "2026-06-05",
+  "location": "Perth WA",
+  "use_case": "mobile high-protein smoothie pop-up; 50g protein claim",
+  "baseline": {
+    "price_per_unit": 31.67,
+    "unit": "kg",
+    "supplier": "Sports Supplements Direct (per-scoop pricing)",
+    "pack_format": "per ~30g scoop"
+  },
+  "floor": {
+    "price_per_unit": 30.0,
+    "unit": "kg",
+    "confidence": "medium",
+    "basis": "observed",
+    "already_at_floor": true
+  },
+  "supply_chain": {
+    "origin": "domestic",
+    "current_tier": "regional_distributor",
+    "reseller_flag": true,
+    "next_tier": "already_at_floor"
+  },
+  "lever": "Already near the commodity WPC floor (~$30-34/kg in 20kg sacks). The real saving is reformulation: don't source all 50g protein from whey — milk (~8g/250ml), Greek yoghurt (~9-10g/100g) and PB (~7.5g/30g) contribute ~20-25g, so whey covers ~30g",
+  "recommended_suppliers": [
+    {
+      "name": "Professional Whey / Pure Product Australia / Bulk Nutrients (natural WPC 20kg)",
+      "location": "AU",
+      "contact": "online (professionalwhey.com.au, bulknutrients.com.au)",
+      "moq": "1 x 20kg sack",
+      "price_note": "~$30-34/kg natural/unflavoured"
+    }
+  ],
+  "wa_deliverable": true,
+  "freight_risk": "low (ambient powder, ships nationally)",
+  "caveats": [
+    "WPI (isolate) costs more per kg; per-gram-protein advantage over WPC is small — stay WPC for cost",
+    "Reformulation moves the 50g claim to the finished blend, so lab substantiation must test the blend, not the scoop"
+  ],
+  "next_action": "Confirm SSD's 20kg sack price against Professional Whey, then redesign the recipe so whey supplies ~30g protein",
+  "sources": ["professionalwhey.com.au", "bulknutrients.com.au"]
+}

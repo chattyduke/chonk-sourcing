@@ -1,0 +1,49 @@
+{
+  "ingredient": "Greek yoghurt",
+  "as_of": "2026-06-05",
+  "location": "Perth WA",
+  "use_case": "mobile high-protein smoothie pop-up",
+  "baseline": {
+    "price_per_unit": 6.0,
+    "unit": "kg",
+    "supplier": "retail / grocery tubs",
+    "pack_format": "retail tub"
+  },
+  "floor": {
+    "price_per_unit": 3.8,
+    "unit": "kg",
+    "confidence": "high",
+    "basis": "observed",
+    "already_at_floor": false
+  },
+  "supply_chain": {
+    "origin": "domestic",
+    "current_tier": "retail",
+    "reseller_flag": false,
+    "next_tier": "foodservice_distributor"
+  },
+  "lever": "Switch from retail tubs to a 10kg foodservice bucket (plain/Greek grade)",
+  "recommended_suppliers": [
+    {
+      "name": "Farmers Union Euro Style Greek Yoghurt 10kg (via Provista)",
+      "location": "AU trade, WA-deliverable via foodservice account",
+      "contact": "via Bidfood Malaga / PFD WA account",
+      "moq": "1 x 10kg bucket",
+      "price_note": "~$3.78/kg observed"
+    },
+    {
+      "name": "Procal Authentic Greek Yoghurt 10kg",
+      "location": "AU (VIC), foodservice-distributed",
+      "contact": "procal.com.au / via distributor",
+      "moq": "1 x 10kg bucket",
+      "price_note": "comparable band"
+    }
+  ],
+  "wa_deliverable": true,
+  "freight_risk": "low (local foodservice account)",
+  "caveats": [
+    "Coconut yoghurt does NOT follow this floor; stays ~$8-15/kg regardless of pack size"
+  ],
+  "next_action": "Add a Greek 10kg bucket to the Bidfood/PFD quote and benchmark vs the $6/kg retail line",
+  "sources": ["provista.online", "anandofoodgroup.com"]
+}

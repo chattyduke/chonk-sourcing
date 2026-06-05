@@ -1,0 +1,49 @@
+{
+  "ingredient": "Frozen banana chunks",
+  "as_of": "2026-06-05",
+  "location": "Perth WA",
+  "use_case": "mobile high-protein smoothie pop-up",
+  "baseline": {
+    "price_per_unit": 10.5,
+    "unit": "kg",
+    "supplier": "Costco (Creative Gourmet branded)",
+    "pack_format": "2.2kg retail bag"
+  },
+  "floor": {
+    "price_per_unit": 4.5,
+    "unit": "kg",
+    "confidence": "medium",
+    "basis": "estimated",
+    "already_at_floor": false
+  },
+  "supply_chain": {
+    "origin": "mixed",
+    "current_tier": "club_store",
+    "reseller_flag": false,
+    "next_tier": "foodservice_distributor"
+  },
+  "lever": "Stop buying branded frozen; freeze fresh banana in-house (~$2.50/kg) or buy IQF banana via a foodservice account (~$4-6/kg)",
+  "recommended_suppliers": [
+    {
+      "name": "Bidfood Malaga (IQF banana line)",
+      "location": "Malaga WA",
+      "contact": "apply online at bidfood.com.au",
+      "moq": "per carton (trade account)",
+      "price_note": "~$4-6/kg estimate"
+    },
+    {
+      "name": "Self-process from Perth Market (Canning Vale) fresh banana",
+      "location": "Canning Vale WA",
+      "contact": "via a market fruit-&-veg wholesaler",
+      "moq": "13kg carton",
+      "price_note": "fresh ~$1.20-1.80/kg + freezing labour"
+    }
+  ],
+  "wa_deliverable": true,
+  "freight_risk": "low",
+  "caveats": [
+    "Self-freezing needs freezer capacity and labour; IQF texture differs from fresh-frozen"
+  ],
+  "next_action": "Trial in-house freezing against an IQF banana line on the next Bidfood quote",
+  "sources": ["purplefoods.com.au", "bidfood.com.au"]
+}

@@ -1,0 +1,42 @@
+{
+  "ingredient": "Frozen mixed berries",
+  "as_of": "2026-06-05",
+  "location": "Perth WA",
+  "use_case": "mobile high-protein smoothie pop-up",
+  "baseline": {
+    "price_per_unit": 8.25,
+    "unit": "kg",
+    "supplier": "Costco (Kirkland Three Berry Blend)",
+    "pack_format": "2kg retail"
+  },
+  "floor": {
+    "price_per_unit": 7.5,
+    "unit": "kg",
+    "confidence": "medium",
+    "basis": "estimated",
+    "already_at_floor": true
+  },
+  "supply_chain": {
+    "origin": "imported",
+    "current_tier": "club_store",
+    "reseller_flag": false,
+    "next_tier": "already_at_floor"
+  },
+  "lever": "Already near floor; club price sits at/below regional 'wholesale'. Only edge is buying single-fruit IQF and self-blending to skew toward cheaper components (strawberry) vs expensive (blueberry/raspberry)",
+  "recommended_suppliers": [
+    {
+      "name": "FrozBerries WA / HarvestimeWA (single-fruit IQF, local pickup)",
+      "location": "Malaga WA",
+      "contact": "(08) 9248 2673; sales@frozberrieswa.com.au",
+      "moq": "10kg carton",
+      "price_note": "~$7-10/kg by fruit; ask for pickup + volume rate"
+    }
+  ],
+  "wa_deliverable": true,
+  "freight_risk": "low (local pickup)",
+  "caveats": [
+    "Interstate importer (Harvestime/Berry Man) reaches Perth only via WA distributor + ~$250-500/drop freight — dearer than local/club"
+  ],
+  "next_action": "Keep Costco as the baseline; price single-fruit IQF at FrozBerries WA for a self-blend trial",
+  "sources": ["frozberries.com.au", "frozberrieswa.com.au"]
+}

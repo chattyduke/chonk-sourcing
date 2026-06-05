@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "chonk-sourcing record",
+  "description": "One sourcing-floor record per ingredient/input.",
+  "type": "object",
+  "required": [
+    "ingredient",
+    "as_of",
+    "baseline",
+    "floor",
+    "supply_chain",
+    "lever",
+    "recommended_suppliers",
+    "wa_deliverable",
+    "freight_risk",
+    "next_action",
+    "sources"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "ingredient": { "type": "string", "minLength": 1 },
+    "as_of": { "type": "string", "minLength": 4, "description": "ISO date the research reflects" },
+    "location": { "type": "string" },
+    "use_case": { "type": "string" },
+    "baseline": {
+      "type": "object",
+      "required": ["price_per_unit", "unit"],
+      "properties": {
+        "price_per_unit": { "type": "number", "minimum": 0 },
+        "unit": { "type": "string", "enum": ["kg", "L", "unit", "serve"] },
+        "supplier": { "type": "string" },
+        "pack_format": { "type": "string" }
+      }
+    },
+    "floor": {
+      "type": "object",
+      "required": ["price_per_unit", "unit", "confidence", "basis"],
+      "properties": {
+        "price_per_unit": { "type": "number", "minimum": 0 },
+        "unit": { "type": "string", "enum": ["kg", "L", "unit", "serve"] },
+        "confidence": { "type": "string", "enum": ["high", "medium", "low", "estimate"] },
+        "basis": { "type": "string", "enum": ["observed", "quoted", "estimated"], "description": "honesty label: how the floor number was obtained" },
+        "already_at_floor": { "type": "boolean", "description": "true if baseline is already near floor" }
+      }
+    },
+    "supply_chain": {
+      "type": "object",
+      "required": ["origin", "current_tier", "next_tier"],
+      "properties": {
+        "origin": { "type": "string", "enum": ["domestic", "imported", "mixed"] },
+        "current_tier": {
+          "type": "string",
+          "enum": ["retail", "club_store", "regional_distributor", "foodservice_distributor", "importer", "manufacturer", "grower"]
+        },
+        "reseller_flag": { "type": "boolean" },
+        "next_tier": {
+          "type": "string",
+          "enum": ["retail", "club_store", "regional_distributor", "foodservice_distributor", "importer", "manufacturer", "grower", "self_import", "already_at_floor"]
+        }
+      }
+    },
+    "lever": { "type": "string", "minLength": 8, "description": "the specific change, not 'buy in bulk'" },
+    "recommended_suppliers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "moq"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "location": { "type": "string" },
+          "contact": { "type": "string" },
+          "moq": { "type": "string", "minLength": 1 },
+          "price_note": { "type": "string" }
+        }
+      }
+    },
+    "wa_deliverable": { "type": "boolean" },
+    "freight_risk": { "type": "string" },
+    "caveats": { "type": "array", "items": { "type": "string" } },
+    "next_action": { "type": "string", "minLength": 8 },
+    "sources": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3 } }
+  }
+}
